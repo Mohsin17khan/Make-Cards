@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-size: clamp(14px, 1vw, 18px);
+  padding: 2rem;
+}
+
+body h1 {
+  font-size: 4rem;
+  color: rgb(226, 87, 110);
+  font-family: cursive;
+  text-align: center;
+}
+body h1 span {
+  padding-left: 4rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+main .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+main .section .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section .buttons h4 {
+  background-color: white;
+  padding: 0.4rem;
+  font-size: 20px;
+  box-shadow: 10px 10px 10px rgba(199, 96, 96, 0.3);
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  font-weight: 800;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 420px; /* container width matches box + padding */
+  height: 255px; /* enough height to show stacked cards */
+  margin: 0 auto;
+}
+
+.container .box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(0) scale(1);
+  top: 0;
+  transition: transform 260ms ease, top 260ms ease, opacity 260ms ease;
+}
+
+.box {
+  background-color: rgb(246, 234, 234);
+  border-radius: 15px;
+  padding: 0.8rem;
+  width: 400px;
+  box-shadow: 5px 5px 15px rgba(239, 38, 38, 0.3);
+}
+.box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.box h1 {
+  margin-top: 0.3rem;
+  font-family: cursive;
+  font-size: 1.7rem;
+}
+.box .details {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  font-family: cursive;
+  color: rgb(241, 82, 108);
+}
+.box .details .town {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.box .details .address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.box .btn button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  outline: none;
+  border: none;
+  box-shadow: 5px 10px 15px rgba(202, 23, 23, 0.3);
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  margin-right: 0.7rem;
+  background: linear-gradient(150deg, rgb(235, 37, 70), rgb(229, 223, 223));
+}
+
+.container .box:nth-child(1) {
+  z-index: 3;
+  top: 0;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.container .box:nth-child(2) {
+  z-index: 2;
+  top: 12px;
+  transform: translateX(-50%) translateY(0px) scale(0.96);
+  opacity: 0.94;
+}
+
+.container .box:nth-child(3) {
+  z-index: 1;
+  top: 27px;
+  transform: translateX(-50%) translateY(0px) scale(0.92);
+  opacity: 0.9;
+}
+
+.form-container {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(241, 82, 108, 0.3);
+  width: 350px;
+  font-family: cursive;
+  display: none;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input[type=text]:focus {
+  border-color: #007bff;
+}
+
+.category {
+  margin-top: 8px;
+}
+
+.category label {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: normal;
+  border: 2px solid black;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 20px;
+}
+
+.formBtn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  letter-spacing: 3px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.2s;
+  box-shadow: 5px 10px 15px rgb(241, 82, 108);
+}
+
+.create {
+  background: linear-gradient(150deg, rgb(235, 37, 70), rgb(229, 223, 223));
+}
+
+.close {
+  background: linear-gradient(150deg, rgb(235, 37, 70), rgb(229, 223, 223));
+}
+
+@media (max-width: 500px) {
+  main .section {
+    flex-direction: column;
+  }
+  /* make the buttons row-reverse on small screens */
+  main .section .buttons {
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  main .section .buttons h4 {
+    font-size: 1.7rem;
+    width: 50px;
+    height: 50px;
+  }
+  .container .box {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
