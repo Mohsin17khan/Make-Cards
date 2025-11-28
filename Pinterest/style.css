@@ -1,0 +1,201 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-color: rgb(250, 247, 247)
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            background-color: white;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 30px;
+        }
+
+        .heading1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.8vw;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .heading1 img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .heading2 {
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+            width: 14%;
+            /* gap: 40px; */
+        }
+
+        .searchHistory {
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 58%;
+            position: relative;
+        }
+
+        .history {
+            width: 90%;
+            background-color: rgb(245, 241, 241);
+            position: absolute;
+            top: 52px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+            z-index: 999;
+        }
+
+        .history .his {
+            margin-top: 20px;
+            border-bottom: 1px solid rgb(193, 186, 186);
+        }
+
+        .history h1 {
+            font-size: 1.4vw;
+
+        }
+
+        .input {
+            background-color: rgb(232, 229, 229);
+            color: black;
+            border-radius: 30px;
+            width: 100%;
+            padding: 16px 0px;
+            box-shadow: 1px 5px 20px rgb(106, 105, 105);
+
+        }
+
+        .input input {
+            background-color: transparent;
+            border: none;
+            padding-left: 50px;
+            outline: none;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1vw;
+        }
+
+        .heading2 {
+
+        }
+        .heading2 h1 i{
+            font-size: 2vw;
+            
+        }
+
+        @media (max-width:600px) {
+            .header {
+                padding: 0px 15px;
+            }
+
+            .heading1 img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .heading1 {
+                font-size: 1.4vw;
+                gap: 10px;
+            }
+
+            .input {
+                width: 100%;
+                padding: 3px 0px;
+            }
+
+            .input input {
+                margin-bottom: 10px;
+                font-size: 1.5vw;
+                letter-spacing: 1px;
+                padding-left: 20px;
+            }
+
+            .heading2 {
+                display: none;
+            }
+
+        }
+
+        .images {
+            width: 100%;
+            /* background-color: red; */
+            columns: 5;
+            column-gap: 10px;
+            padding: 20px 50px;
+            margin: auto;
+        }
+
+        .box {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            break-inside: avoid;
+            margin-bottom: 10px;
+            position: relative;
+
+
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            cursor: pointer;
+        }
+
+        .box img:hover {
+            opacity: 0.9;
+        }
+
+        .box h1 {
+            position: absolute;
+            bottom: 0;
+            color: white;
+            padding: 10px;
+            font-size: 1.2vw;
+
+        }
+
+        @media (max-width:600px) {
+            .images {
+                columns: 2;
+                column-gap: 10px;
+                padding: 14px;
+            }
+            .history{
+                top:35px ;
+                padding: 10px;
+            }
+
+        }
